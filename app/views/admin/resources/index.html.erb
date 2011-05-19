@@ -15,7 +15,7 @@
 <%= render 'index' %>
 
 <ul class="predefined_filters">
-  <li><%= link_to Typus::I18n.t("All"), :action => 'index' %> (<%= set_context.count %>)</li>
+  <li><%= link_to Typus::I18n.t("All"), :action => 'index' %></li>
   <% predefined_filters.each do |filter, action, scope| %>
     <% url = action.is_a?(String) ? params.dup.cleanup.merge(:action => action) : action %>
     <li><%= link_to Typus::I18n.t(filter), url %> <%= "(#{@resource.send(scope).count})" if scope && @resource.respond_to?(scope) %></li>

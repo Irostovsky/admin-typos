@@ -25,5 +25,6 @@ Typus.setup do |config|
   # options in the plugin source. (https://github.com/mislav/will_paginate/blob/rails3/lib/will_paginate/view_helpers.rb)
   # config.pagination = { :previous_label => "&larr; " + Typus::I18n.t("Previous"),
   #                       :next_label => Typus::I18n.t("Next") + " &rarr;" }
-
+  config.authentication = :devise
+  config.user_class_name = "User"
 end

@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/fesplugas/typus.git
-  revision: 5214ac82b537c25f00087bff41056e1878b1edc3
+  revision: 8051cbe5e0e7c338a11e041f5051bc7d464f4f21
+  branch: wip/devise
   specs:
     typus (3.0.10)
       bcrypt-ruby

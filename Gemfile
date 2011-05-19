@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
-gem 'typus', :git => 'git://github.com/fesplugas/typus.git'
 gem 'devise'
+gem 'typus', :git => 'git://github.com/fesplugas/typus.git', :branch => 'wip/devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
