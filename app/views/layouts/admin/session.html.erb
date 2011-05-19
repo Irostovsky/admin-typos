@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="<%= I18n.locale %>">
+
+<head>
+  <%= render 'admin/shared/head' %>
+</head>
+
+<body id="account">
+
+  <div id="wrapper">
+
+    <div id="box">
+      <h1 class="logo"><%= Typus.admin_title %></h1>
+      <%= display_flash_message %>
+      <%= yield :layout %>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

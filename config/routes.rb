@@ -1,6 +1,8 @@
 AdminTypos::Application.routes.draw do
-  resources :clubs
+  devise_for :users
 
+  resources :clubs
+  root :to => "clubs#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

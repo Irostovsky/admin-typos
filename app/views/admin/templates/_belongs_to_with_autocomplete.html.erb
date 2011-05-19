@@ -1,0 +1,30 @@
+<% content_for :javascripts do %>
+  <% label = "#{@item.class.model_name.underscore.gsub("/","_")}_#{related_fk}" %>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $("#tokenInput_for_<%= related_fk %>").tokenInput("/admin/<%= association.name.to_s.pluralize %>/autocomplete", {
+            hintText: "",
+            queryParam: 'term',
+            tokenLimit: 1,
+            <% if (item = @item.send(attribute)) %>
+            prePopulate: [ { id: <%= item.id %>, name: "<%= item.to_label %>" } ],
+            <% end %>
+            onAdd: function(item) {
+                $("#<%= label %>").val(item.id);
+            },
+            onDelete: function (item) {
+                $("#<%= label %>").val("");
+            }
+        });
+    });
+  </script>
+<% end %>
+
+<li id="<%= attribute %>">
+  <%= form.label related_fk, "#{label_text} <small>#{message}</small>".html_safe %>
+  <%= form.hidden_field related_fk %>
+  <input id="tokenInput_for_<%= related_fk %>"
+         size="30"
+         type="text"
+         value="<%= @item.send(attribute).try(:to_label) %>" />
+</li>
