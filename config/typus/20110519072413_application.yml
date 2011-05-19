@@ -4,11 +4,11 @@
 
 Club:
   fields:
-    default: name, exclusive
+    default: name, exclusive, created_at
     form: name, exclusive
   order_by: 
   relationships: 
-  filters: created_at
+  filters: created_at, updated_at
   search: name
   application: admin-typos
 
