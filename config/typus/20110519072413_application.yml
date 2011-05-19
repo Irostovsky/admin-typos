@@ -1,0 +1,14 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Club:
+  fields:
+    default: name, exclusive
+    form: name, exclusive
+  order_by: 
+  relationships: 
+  filters: created_at
+  search: name
+  application: admin-typos
+
