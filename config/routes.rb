@@ -1,4 +1,6 @@
 AdminTypos::Application.routes.draw do
+  resources :menus
+
   devise_for :users
 
   resources :clubs
